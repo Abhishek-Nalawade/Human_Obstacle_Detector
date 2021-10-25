@@ -152,7 +152,7 @@ double Data::loadVideo(std::string filePath, std::string test) {
           cv::waitKey(1);
           char q = static_cast<char> (cv::waitKey(25));
           locx = finalLocations[0][0]/1000;
-          if (q == 27) {
+          if (q == 27 || test == "ON") {
             break;
           }
         }

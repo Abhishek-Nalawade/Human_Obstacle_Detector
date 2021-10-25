@@ -61,7 +61,7 @@ TEST(Video, Data_Input_as_File_does_not_exist) {
  */
 TEST(Video, Testing_Locations) {
   Data location;
-  EXPECT_NEAR(location.loadVideo("../testdata/box_test.jpg", "OFF"), 1.07, 0.1);
+  EXPECT_NEAR(location.loadVideo("../testdata/box_test.jpg", "ON"), 1.07, 0.1);
 }
 
 
