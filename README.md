@@ -1,6 +1,6 @@
 ## Human_Obstacle_Detector
-[![Build Status](https://app.travis-ci.com/Abhishek-Nalawade/Human_Obstacle_Detector.svg?branch=development_sprint_2)](https://app.travis-ci.com/Abhishek-Nalawade/Human_Obstacle_Detector)
-[![Coverage Status](https://coveralls.io/repos/github/Abhishek-Nalawade/Human_Obstacle_Detector/badge.svg?branch=development_sprint_2)](https://coveralls.io/github/Abhishek-Nalawade/Human_Obstacle_Detector?branch=development_sprint_2)
+[![Build Status](https://app.travis-ci.com/Abhishek-Nalawade/Human_Obstacle_Detector.svg?branch=main)](https://app.travis-ci.com/Abhishek-Nalawade/Human_Obstacle_Detector)
+[![Coverage Status](https://coveralls.io/repos/github/Abhishek-Nalawade/Human_Obstacle_Detector/badge.svg?branch=main)](https://coveralls.io/github/Abhishek-Nalawade/Human_Obstacle_Detector?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ---
 

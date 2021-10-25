@@ -63,7 +63,7 @@ int main() {
         std::cout << "Enter the file path: \n";
         std::string path;
         std::cin >> path;
-        data.loadVideo(path);
+        data.loadVideo(path, "OFF");
       } else {
         std::cout << "Sorry to see you go! \n";
       }

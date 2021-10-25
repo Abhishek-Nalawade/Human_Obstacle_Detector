@@ -102,15 +102,20 @@ int Data::getCamera(int mode) {
  * @param filePath Path to the video file
  * @return double
  */
-double Data::loadVideo(std::string filePath) {
+double Data::loadVideo(std::string filePath, std::string test) {
   frame.release();
   double locx;
+  cv::VideoCapture cap(2);
   std::string frameInput = "video";
-  cv::VideoCapture cap(filePath);
-    if (cap.isOpened() == false) {
+  if (test == "OFF"){
+  cv::VideoCapture cap1(filePath);
+  cap = cap1;
+  std::cout <<"here\n";
+  }
+    if (cap.isOpened() == false && test == "OFF") {
       std::cout << "Video File cannot be opened! " << std::endl;
       return 3;
-    } else {
+    } else if (test == "ON" || test == "OFF") {
         while (true) {
           // variable to store the camera frame X, Y, Z
           std::vector<std::vector<double>> coor;
@@ -123,7 +128,11 @@ double Data::loadVideo(std::string filePath) {
 
           // variable to store the estimated depths of humans
           std::vector<double> depths;
-          cap >> frame;
+          if (test == "OFF"){
+            cap >> frame;
+            } else if (test == "ON"){
+            frame = cv::imread(filePath);
+            }
           if (frame.empty())
             break;
 
