@@ -44,7 +44,17 @@
  */
 TEST(Camera, Data_Input_Method_camera_works) {
   Data camera;
-  EXPECT_EQ(camera.getCamera(2), 3);
+  std::string test = "OFF";
+  EXPECT_EQ(camera.getCamera(2, test), 3);
+}
+
+/**
+ * @brief TEST to verify the main loop that call all the methods for camera
+ */
+TEST(Camera, Testing_Locations) {
+  Data location;
+  std::string test = "ON";
+  EXPECT_NEAR(location.getCamera(2, test), -0.0255, 0.2);
 }
 
 /**
@@ -53,16 +63,17 @@ TEST(Camera, Data_Input_Method_camera_works) {
 TEST(Video, Data_Input_as_File_does_not_exist) {
   Data video;
   std::string filePath = "../67.webm";
-  EXPECT_EQ(video.loadVideo(filePath, "OFF"), 3);
+  std::string test = "OFF";
+  EXPECT_EQ(video.loadVideo(filePath, test), 3);
 }
 
 /**
- * @brief Construct a new TEST object
+ * @brief TEST to verify the main loop that call all the methods for video
  */
 TEST(Video, Testing_Locations) {
   Data location;
-  std::cout<<"hi "<<location.loadVideo("../testdata/box_test.jpg", "ON");
-  EXPECT_NEAR(location.loadVideo("../testdata/box_test.jpg", "ON"), 1.07, 0.2);
+  std::string test = "ON";
+  EXPECT_NEAR(location.loadVideo("../testdata/box_test.jpg", test), 1.07, 0.2);
 }
 
 

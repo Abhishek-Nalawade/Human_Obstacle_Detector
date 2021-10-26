@@ -10,4 +10,7 @@ build/
 # Python
 *.pyc
 
+# Videos
+*.webm
+*.mp4
 
