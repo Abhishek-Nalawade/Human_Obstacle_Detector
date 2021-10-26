@@ -148,12 +148,17 @@ double Data::loadVideo(std::string filePath, std::string test) {
           coor = dist.getXY(depths, human_detector.box_coordinates);
           finalLocations = dist.camToRobotTransform(coor);
           dist.displayLocation(finalLocations, frameInput);
+          if(test == "OFF"){
           cv::imshow("Detected Humans", resizedFrame);
           cv::waitKey(1);
           char q = static_cast<char> (cv::waitKey(25));
           locx = finalLocations[0][0]/1000;
-          if (q == 27 || test == "ON") {
+          if (q == 27) {
             break;
+          }
+        } else {
+          locx = finalLocations[0][0]/1000;
+          break;
           }
         }
       cap.release();
