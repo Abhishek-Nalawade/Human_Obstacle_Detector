@@ -46,7 +46,7 @@ Data::Data() {}
  * @param mode : Camera mode to view the camera or not
  * @return int
  */
-double Data::getCamera(int mode, std::string &test) {
+double Data::getCamera(int mode, const std::string &test) {
   frame.release();
   double locx = 1;
   std::string frameInput = "camera";
@@ -122,7 +122,7 @@ double Data::getCamera(int mode, std::string &test) {
  * @param filePath Path to the video file
  * @return double
  */
-double Data::loadVideo(std::string filePath, std::string &test) {
+double Data::loadVideo(std::string filePath, const std::string &test) {
   frame.release();
   double locx = 1;
   cv::VideoCapture cap(2);
