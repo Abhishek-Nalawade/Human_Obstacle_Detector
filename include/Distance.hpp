@@ -58,6 +58,7 @@ class Distance {
   int displayLocation(std::vector<Eigen::Vector4d> &locations,
                                                     std::string &frameInput);
   ~Distance();
+  double loadVideo(std::string filePath, const std::string &test);
 
  private:
   double avgHumanHeight = 175;

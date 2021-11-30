@@ -52,7 +52,7 @@
 class Data {
  public:
   Data();
-  virtual Distance dist;
+  Distance dist;
   Detect human_detector;
   cv::Mat frame;
   virtual double getCamera(int mode, const std::string &test);

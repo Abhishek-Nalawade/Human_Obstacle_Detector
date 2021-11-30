@@ -37,7 +37,7 @@
 #include"Data.hpp"
 #include"gmock/gmock.h"
 
-class MockDistance : public Data {
+class MockData : public Data {
  public:
   MockData();
   MOCK_METHOD2(loadVideo, double(std::string filePath, const std::string &test));

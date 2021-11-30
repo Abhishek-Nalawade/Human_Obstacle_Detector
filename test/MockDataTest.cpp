@@ -41,9 +41,13 @@
  #include <opencv2/opencv.hpp>
 
 TEST(CheckFile, FileExists) {
-  MockData video = new MockData();
-  // std::string filePath = "../67.webm";
-  // std::string test = "OFF";
-  // EXPECT_EQ(video.loadVideo(filePath, test), 3);
-
+  std::string filePath = "../67.webm";
+  std::string teststr = "OFF";
+  MockData *test = new MockData();
+  Distance check;
+  check.loadVideo(filePath, teststr);
+  EXPECT_CALL(*test, loadVideo(filePath, teststr))
+        .Times(::testing::AtLeast(1));
+  EXPECT_EQ(check.loadVideo(filePath, teststr), 3);
+  delete test;
 }
