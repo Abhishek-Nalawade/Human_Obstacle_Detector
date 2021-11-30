@@ -13,6 +13,6 @@ add_executable(
     MockDataTest.cpp
 )
 
-target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include ../vendor/googletest/googlemock/include
+target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include  ../vendor/googletest/googlemock/include
                                            ${CMAKE_SOURCE_DIR}/include ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(cpp-test PUBLIC gtest gmock ${OpenCV_LIBS})
