@@ -1,7 +1,7 @@
 /**
  * MIT License
 
- * Copyright (c) 2021 Abhishek Nalawade, Aditya Jadhav
+ * Copyright (c) 2021 Abhishek Nalawade
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,45 +23,27 @@
  **/
 
 /**
- * @file Data.hpp
- * @author Aditya Jadhav (amjadhav@umd.edu)
+ * @file MockDistance.hpp
  * @author Abhishek Nalawade (abhi1793@umd.edu)
- * @brief Data Class Declaration
+ * @brief Mock Distance Class Declaration
  * @version 0.1
- * @date 2021-10-15
+ * @date 2021-11-30
  *
  * @copyright Copyright (c) 2021
  *
  */
 
-#pragma once
+ #include <Eigen/Dense>
+ #include <gtest/gtest.h>
+ #include <gmock/gmock.h>
+ #include <string>
+ #include "../include/MockData.hpp"
+ #include <opencv2/opencv.hpp>
 
-#include <Eigen/Dense>
-#include <string>
-#include <iostream>
-#include "../include/Distance.hpp"
-#include "../include/Detect.hpp"
-#include <opencv2/opencv.hpp>
+TEST(CheckFile, FileExists) {
+  MockData video = new MockData();
+  // std::string filePath = "../67.webm";
+  // std::string test = "OFF";
+  // EXPECT_EQ(video.loadVideo(filePath, test), 3);
 
-/**
- * @brief Data class includes methods to get the input data
- *        and a method to put bounging boxes around the
- *        detected humans.
- *
- */
-class Data {
- public:
-  Data();
-  virtual Distance dist;
-  Detect human_detector;
-  cv::Mat frame;
-  virtual double getCamera(int mode, const std::string &test);
-  virtual double loadVideo(std::string filePath, const std::string &test);
-  virtual cv::Mat preProcessing(const cv::Mat &frame);
-  virtual cv::Mat videoPreProcessing(const cv::Mat &frame);
-  virtual ~Data();
-
- private:
-  cv::Mat frame_copy;
-  cv::Mat resizedFrame;
-};
+}
