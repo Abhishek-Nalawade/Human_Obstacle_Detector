@@ -124,6 +124,15 @@ To Run the program/demo
 ./app/shell-app
 ```
 
+## GMock
+
+Mocked files
+
+1) MockData.hpp - Mocked Data.hpp
+2) MockDataTest.cpp - Test file for MockData.hpp Test to verify the video file does not exist and no frame is read .
+
+
+
 ## Links
 
 AIP Process --> [Link](https://docs.google.com/spreadsheets/d/1bapR4zMCzfcwQHhxAm6KktWsMINTTPEt/edit#gid=2052063551)
